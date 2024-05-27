@@ -25,7 +25,7 @@
 ##### `#!/bin/bash`, pra que serve?
 
 - indicar qual é o interpretador dos comandos do script, presente na primeira linha do script
-- sem isso também é possível executar o script, o interpretador de comandos é carregado no momento do login do usuário (/etc/passwd)
+- sem isso também é possível executar o script, o interpretador de comandos é carregado no momento do login do usuário (/etc/passwd), porém com isso a interpretação é mais rápida
 
 ##### como utilizar parâmetros dentro do script?
 
@@ -43,6 +43,12 @@
   - armazena nessa variável o resultado da excução do comando
 - comandos envolvidos por `$()`: são executado em um subshell
 - termo `local`: indica que a variável tem escopo local
+
+##### `echo teste > arquivo.txt` != `echo teste >> arquivo.txt`
+
+- ambos escrevem informações em um determinado arquivo
+- no primeiro caso, o comando sobrescreve todo o conteúdo dentro do arquivo, caso tenha algum, para escrever o novo
+- o segundo junta o conteúdo já presente dentro do arquivo com a informação nova
 
 ---
 
