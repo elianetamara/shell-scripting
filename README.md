@@ -20,6 +20,10 @@
 - 1: saída padrão
 - 2: mensagens de erro
 
+##### crontab
+
+- arquivo utilizado para agendamento de tarefas, para que sejam executadas em dias e horários determinados ou em intervalos regulares
+
 ---
 
 ##### `#!/bin/bash`, pra que serve?
@@ -49,6 +53,10 @@
 - ambos escrevem informações em um determinado arquivo
 - no primeiro caso, o comando sobrescreve todo o conteúdo dentro do arquivo, caso tenha algum, para escrever o novo
 - o segundo junta o conteúdo já presente dentro do arquivo com a informação nova
+
+##### `/dev/null`, o que é o null?
+
+- arquivo especial do sistema com o objetivo de descartar as informações repassadas a ele
 
 ---
 
