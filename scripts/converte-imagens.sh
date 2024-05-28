@@ -1,21 +1,21 @@
 #!/bin/bash
 
 converte_imagem(){
-    local caminho_imagem=$1
-    local imagem_sem_extensao=$(ls $caminho_imagem | awk -F. '{ print $1 }')
-    convert $imagem_sem_extensao.jpg $imagem_sem_extensao.png
+    local CAMINHO_IMAGEM=$1
+    local IMAGEM_SEM_EXTENSAO=$(ls $CAMINHO_IMAGEM | awk -F. '{ print $1 }')
+    convert $IMAGEM_SEM_EXTENSAO.jpg $IMAGEM_SEM_EXTENSAO.png
 }
 
 varrer_diretorio(){
     cd $1
-    for arquivo in *
+    for ARQUIVO in *
     do
-        local caminho_arquivo=$(find ~/Downloads/imagens-novos-livros -name $arquivo)
-        if [ -d $caminho_arquivo ]
+        local CAMINHO_ARQUIVO=$(find ~/Downloads/imagens-novos-livros -name $ARQUIVO)
+        if [ -d $CAMINHO_ARQUIVO ]
         then
-            varrer_diretorio $caminho_arquivo
+            varrer_diretorio $CAMINHO_ARQUIVO
         else
-            converte_imagem $caminho_arquivo
+            converte_imagem $CAMINHO_ARQUIVO
         fi
     done
 }

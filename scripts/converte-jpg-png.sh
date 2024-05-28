@@ -7,10 +7,10 @@ then
     mkdir png
 fi
 
-for imagem in *.jpg
+for IMAGEM in *.jpg
 do
-    local imagem_sem_extensao=$(ls $imagem | awk -F. '{ print $1 }')
-    convert $imagem_sem_extensao.jpg png/$imagem_sem_extensao.png
+    local IMAGEM_SEM_EXTENSAO=$(ls $IMAGEM | awk -F. '{ print $1 }')
+    convert $IMAGEM_SEM_EXTENSAO.jpg png/$IMAGEM_SEM_EXTENSAO.png
 done
 }
 
