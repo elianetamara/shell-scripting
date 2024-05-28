@@ -67,3 +67,10 @@
 
 - `$?`: pegar o status de saída da função
 - `-eq`: verificação de igualdade
+
+##### `\b([0-9]{1,3}\.){3}[0-9]{1,3}\b`
+
+- `([0-9]{1,3}\.){3}`: agrupa expressão entre parênteses e quantifica que a mesma se repete três vezes
+- `\.`: indica que apenas o ponto é aceito na expressão
+- `[0-9]{1,3}`: filtra dígitos de zero até nove, com  variação de um a três algarismos
+- `\b`: word boundary, delimita tamanho específico para a expressão (sem caractere adjacente no início/final dela)
