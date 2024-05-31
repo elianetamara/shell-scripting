@@ -22,7 +22,11 @@
 
 ##### crontab
 
-- arquivo utilizado para agendamento de tarefas, para que sejam executadas em dias e horários determinados ou em intervalos regulares
+ arquivo utilizado para agendamento de tarefas, para que sejam executadas em dias e horários determinados ou em intervalos regulares
+
+##### mysqldump
+
+ programa usado para fazer backup de um determinado banco utilizando SQL
 
 ---
 
@@ -82,3 +86,7 @@
 - `\.`: indica que apenas o ponto é aceito na expressão
 - `[0-9]{1,3}`: filtra dígitos de zero até nove, com  variação de um a três algarismos
 - `\b`: word boundary, delimita tamanho específico para a expressão (sem caractere adjacente no início/final dela)
+
+##### `sudo mysql -u root nomebanco < ~/path_backup`
+
+- restabelece os dados presentes no arquivo de backup para o banco presente no MySQL
